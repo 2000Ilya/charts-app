@@ -1,8 +1,8 @@
 import { init } from "echarts";
 
-import seriesData from "./newHandledData";
+import getSeriesData from "./helpers/getSeriesData";
 
-import tooltipFormatter from "./helpers/tooltipFormatter";
+import formatTooltip from "./helpers/formatTooltip";
 
 import "./style.css";
 
@@ -28,24 +28,27 @@ let option = {
     axisPointer: {
       type: "line",
     },
-    formatter: tooltipFormatter,
+    formatter: formatTooltip,
   },
   legend: {
     orient: "horizontal",
-    bottom: "18px",
+    bottom: "0px",
     icon: "circle",
+    formatter: function (legendItem) {
+      return legendItem + " П.";
+    },
   },
   grid: {
-    left: "39px",
-    right: "58px",
-    bottom: "90px",
-    top: "117px",
+    left: "12px",
+    right: "38px",
+    bottom: "55px",
+    top: "101px",
     containLabel: true,
   },
   xAxis: [
     {
       type: "category",
-      data: seriesData.xAxis,
+      data: getSeriesData.xAxis,
       axisLine: {
         show: false,
       },
@@ -65,7 +68,7 @@ let option = {
       },
     },
   ],
-  series: seriesData.data,
+  series: getSeriesData.data,
 };
 
 if (option && typeof option === "object") {

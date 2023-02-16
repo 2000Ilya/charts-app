@@ -31,5 +31,24 @@ html {
   background: #ffffff;
   border-radius: 0.8rem;
   box-sizing: border-box;
-  padding: 1.6rem;
+  padding: 1.5rem 1.2rem;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tooltip {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 1.2rem;
+  min-width: 17rem;
+}
+
+.legend-name {
+  font-size: 1.2rem;
 }
