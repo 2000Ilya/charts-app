@@ -4,4 +4,4 @@
 npm install && npm run serve
 ```
 
-## Далее переходите в браузере по ссылке: <a href="localhost:9002">localhost:9002</a>
+## Далее переходите в браузере по ссылке: [localhost:9002](localhost:9002)
