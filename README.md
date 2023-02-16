@@ -3,3 +3,5 @@
 ```bash
 npm install && npm run serve
 ```
+
+## Далее переходите в браузере по ссылке: <a>localhost:9002</a>
